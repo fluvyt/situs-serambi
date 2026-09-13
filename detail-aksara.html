@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Aksara - SERAMBI</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="md3-navbar">
+    <div class="brand">
+      <img src="icon.png" alt="Serambi Logo" class="brand-icon">
+      <span class="brand-name-main">SERAMBI</span>
+      <span class="brand-text">serBL</span>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="aksara.html" class="active">Kembali ke Aksara</a></li>
+    </ul>
+  </nav>
+
+  <main class="detail-container">
+    <!-- Header: Huruf Besar & Tombol Suara -->
+    <div class="detail-header">
+      <h1 class="aksara-big" id="aksaraUtama" style="font-family: 'Incung', sans-serif;">k</h1>
+      <h2 class="aksara-name" id="namaAksara">Ka</h2>
+      
+      <!-- Elemen Audio (Tersembunyi) -->
+      <audio id="audioAksara" src=""></audio>
+      
+      <button id="playAudioBtn" class="btn-primary audio-btn">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Dengarkan Bunyi
+      </button>
+    </div>
+
+    <!-- Bagian Sandangan / Diakritik -->
+    <section class="diakritik-section">
+      <h3>Penggunaan Diakritik</h3>
+      <div class="diakritik-grid" id="diakritikGrid">
+        <!-- Akan diisi otomatis oleh JavaScript -->
+      </div>
+    </section>
+
+    <!-- Bagian Contoh Kata -->
+    <section class="contoh-section">
+      <h3>Contoh Penggunaan dalam Kata</h3>
+      <div class="contoh-list" id="contohList">
+        <!-- Akan diisi otomatis oleh JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

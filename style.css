@@ -1,0 +1,1602 @@
+/* 1. Import Gemini-like Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap');
+/* 2. Load Your Custom TTF Font for "serambi" */
+@font-face {
+  font-family: 'SerambiCustomFont';
+  /* Using your specific font file */
+  src: url('incung.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 2. Terapkan font Incung ke semua teks yang berwarna biru */
+.aksara-big, 
+.diakritik-card .incung-text, 
+.contoh-card .incung-word {
+  font-family: 'SerambiCustomFont', sans-serif !important;
+}
+
+/* 3. Color Tokens Matching the Picture */
+:root {
+  --bg-cream: #F8F7EE;        /* Cream background */
+  --brand-blue: #0855B6;      /* Blue for SERAMBI */
+  --brand-orange: #F29A2E;    /* Orange for incung font */
+  --menu-blue: #1A6CC4;       /* Text color for menu links */
+  --active-bg: #008DCC;       /* Solid blue for the active pill */
+  --hover-bg: #E1EDF7;        /* Light blue hover state */
+  
+  --gemini-font: 'Google Sans', 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--gemini-font);
+  background-color: var(--bg-cream); /* Replaced the grey with cream */
+}
+
+/* 4. Top App Bar (Navbar) */
+.md3-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px; /* Made slightly taller */
+  padding: 0 32px;
+  background-color: var(--bg-cream);
+  border-bottom: 1px solid rgba(0,0,0,0.05); /* Flat look with subtle border */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 5. Brand Section */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 48px; /* Larger icon to match picture */
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Styling the main "SERAMBI" text */
+.brand-name-main {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: 0.5px;
+}
+
+/* Styling the incung.ttf "serambi" text */
+.brand-text {
+  font-family: 'SerambiCustomFont', sans-serif;
+  font-size: 1.4rem;
+  color: var(--brand-orange); 
+  /* Push it slightly down if the baseline of incung.ttf doesn't match Outfit */
+  margin-top: 4px; 
+}
+
+/* 6. Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+}
+
+.nav-menu a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--menu-blue);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 100px; 
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* 7. Menu Active and Hover States */
+.nav-menu a.active {
+  background-color: var(--active-bg);
+  color: #ffffff;
+}
+
+.nav-menu a:not(.active):hover {
+  background-color: var(--hover-bg);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 32px;
+  max-width: 1200px; /* Keeps the content from stretching too wide on large screens */
+  margin: 0 auto;    /* Centers the hero section on the page */
+  gap: 40px;
+}
+
+/* Left Side: Text Content */
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--brand-blue); /* Matches the "SERAMBI" blue */
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+/* Highlights the second half of the title in orange */
+.title-highlight {
+  color: var(--brand-orange); 
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #4A5568; /* A soft dark grey for easy reading */
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* MD3 Styled Call-To-Action Button */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--active-bg); /* Uses the same solid blue as your active menu item */
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 16px 36px;
+  border-radius: 100px; /* MD3 Pill Shape */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 141, 204, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #007BB5; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Soft lift effect when hovered */
+}
+
+/* Right Side: Image Area */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* A temporary box so you can see where your image will go */
+/* Right Side: Image Area */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically centers the image */
+}
+
+/* Styling the actual Perkamen image */
+.hero-img {
+  width: 100%;
+  max-width: 500px; /* Adjust this if you want the image bigger or smaller */
+  height: auto;
+  object-fit: contain; /* Ensures the image doesn't stretch or distort */
+  
+  /* Adds a soft shadow behind the PNG to make it lift off the page */
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.08)); 
+}
+
+/* =========================================
+   FEATURES / 3-CARD SECTION
+   ========================================= */
+
+.features-section {
+  padding: 60px 32px 100px 32px; /* Extra padding on the bottom for spacing */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  gap: 24px; /* Space between the 3 cards */
+  justify-content: space-between;
+}
+
+/* Styling the individual cards */
+.feature-card {
+  flex: 1; /* Ensures all 3 cards stretch to be the exact same width */
+  background-color: var(--brand-blue); /* The same dark blue from your SERAMBI text */
+  padding: 40px 24px;
+  border-radius: 24px; /* MD3 standard large rounding */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(8, 85, 182, 0.15); /* Soft blue shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Icon / Image Styling */
+.card-icon {
+  width: 80px;         /* Adjust this if you want the images bigger or smaller */
+  height: 80px;
+  object-fit: contain; /* Prevents your images from stretching out of proportion */
+  margin-bottom: 20px; /* Space between the image and the title below it */
+  display: inline-block; 
+}
+
+/* Hover effect to lift the card */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(8, 85, 182, 0.25);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff; /* Crisp white for the title to pop against the blue */
+}
+
+.card-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--bg-cream); /* Uses your cream background color for the text */
+  opacity: 0.9; /* Softens the paragraph text slightly */
+}
+
+/* =========================================
+   ABOUT / PHILOSOPHY SECTION
+   ========================================= */
+
+.about-section {
+  padding: 60px 32px 100px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start; /* Aligns content to the top */
+  gap: 64px; /* Generous spacing between image and text */
+}
+
+/* Left Side: Image Setup */
+.about-image-wrapper {
+  flex: 1;
+  position: sticky; /* Makes the image stick while scrolling through the long text */
+  top: 120px; /* Accounts for the sticky navbar so it doesn't overlap */
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 24px; /* MD3 standard large rounding */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(8, 85, 182, 0.1); /* Soft blue elevation shadow */
+}
+
+/* Right Side: Text Setup */
+.about-text {
+  flex: 1.2; /* Gives the text column slightly more width than the image */
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Spacing between the paragraphs */
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  line-height: 1.8; /* Tall line height for easy reading of long blocks of text */
+  font-style: italic; /* Matches your reference image */
+  color: var(--menu-blue); /* Matches the blue text in your picture */
+  font-weight: 500;
+}
+
+/* =========================================
+   IMAGE BANNER SECTION
+   ========================================= */
+
+.image-banner-section {
+  position: relative;
+  background-image: url('images/background.jpg'); 
+  background-size: cover;          
+  background-position: center;     
+  
+  /* --- NEW 16:9 SETTINGS --- */
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Forces the exact 16:9 wide/high ratio */
+  
+  /* Keeps text centered inside */
+  display: flex;
+  justify-content: center;         
+  align-items: center;             
+  margin-top: 60px;
+  padding: 0 32px; /* Keeps text from touching the sides on small screens */
+}
+
+/* The dark tint over the image */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65); /* Adjust the 0.65 to make it darker or lighter */
+  z-index: 1;
+}
+
+/* The text container */
+.banner-content {
+  position: relative;
+  z-index: 2; /* Puts the text ON TOP of the dark overlay */
+  text-align: center;
+  max-width: 850px; /* Prevents the text from stretching too wide on big screens */
+  color: #ffffff;
+}
+
+/* Styling the quote */
+.banner-quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Styling the bottom call-to-action */
+.banner-cta {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+/* Styling the orange link */
+.banner-link {
+  color: var(--brand-orange); /* Uses the exact orange we defined earlier */
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.banner-link:hover {
+  color: #FFB347; /* Brightens the orange slightly when hovered */
+}
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+
+.site-footer {
+  background-color: #C6EEFE; /* The light blue from your picture */
+  padding: 60px 32px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows it to stack nicely on phones */
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 80px; /* Space between the 3 columns */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Individual column for the links */
+.social-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Space between the IG and YT rows */
+}
+
+/* Styling the link row (Icon + Text) */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--brand-blue); /* Your main dark blue color */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+  transform: translateX(4px); /* Tiny nudge to the right when hovered */
+}
+
+/* Styling the SVG icons */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Forces the SVG to match the text color automatically */
+}
+
+/* Styling the text */
+.social-text {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.aksara-section {
+  padding: 80px 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aksara-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.aksara-header h2 {
+  font-size: 2.5rem;
+  color: var(--brand-blue);
+  margin-bottom: 12px;
+}
+
+.aksara-header p {
+  font-size: 1.1rem;
+  color: #4A5568;
+}
+
+/* 1. CSS Grid Setup for the Buttons */
+.aksara-grid {
+  display: grid;
+  /* This automatically fits as many cards as possible in a row */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 24px;
+}
+
+/* 2. Styling the Interactive Buttons/Cards */
+.aksara-card {
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 20px; /* MD3 rounded corners */
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(8, 85, 182, 0.08); /* Soft blue shadow */
+  transition: all 0.2s ease;
+}
+
+/* 3. Hover Effect for the Buttons */
+.aksara-card:hover {
+  transform: translateY(-5px) scale(1.02); /* Slight lift and zoom */
+  box-shadow: 0 12px 20px rgba(8, 85, 182, 0.15);
+  border-color: var(--active-bg); /* Adds a blue border on hover */
+}
+
+/* 4. The Large Incung Character */
+.char-main {
+  font-family: 'SerambiCustomFont', sans-serif; /* Switched to your TTF font */
+  font-size: 3.5rem; /* Large size so the symbols are easy to read */
+  font-weight: normal; 
+  color: var(--brand-blue);
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+/* 5. Romaji and Sound Details Container */
+.char-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.char-romaji {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--menu-blue);
+}
+
+.char-sound {
+  font-size: 0.9rem;
+  color: var(--brand-orange);
+  font-style: italic;
+}
+
+/* =========================================
+   RUPO BASAMO (CONVERTER) SECTION
+   ========================================= */
+
+.rupo-section {
+  padding: 80px 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.rupo-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.rupo-header h2 {
+  font-size: 2.5rem;
+  color: var(--brand-blue);
+  margin-bottom: 12px;
+}
+
+.rupo-header p {
+  font-size: 1.1rem;
+  color: #4A5568;
+}
+
+.converter-container {
+  display: flex;
+  align-items: flex-start; /* Changed from center to flex-start */
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-label {
+  font-weight: 600;
+  color: var(--brand-blue);
+  margin-left: 16px;
+}
+
+.md3-textarea {
+  width: 100%;
+  height: 300px; /* Fixed height for perfect symmetry */
+  padding: 24px;
+  font-family: var(--gemini-font);
+  font-size: 1.2rem;
+  color: var(--md-sys-color-on-surface);
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(8, 85, 182, 0.05);
+  resize: none; 
+  box-sizing: border-box; /* Forces padding to stay inside the height */
+  transition: all 0.2s ease;
+}
+
+.md3-textarea:focus {
+  outline: none;
+  border-color: var(--active-bg);
+  box-shadow: 0 4px 12px rgba(0, 141, 204, 0.15);
+}
+
+.readonly-output {
+  background-color: var(--hover-bg); 
+  overflow-y: auto;
+  font-family: 'SerambiCustomFont', sans-serif; 
+  font-size: 2.5rem; 
+  word-wrap: break-word; /* Ensures long text doesn't break the box width */
+}
+
+/* 3. Push the arrow down so it sits perfectly between the two boxes */
+.convert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--brand-orange);
+  margin-top: 140px; /* Pushes the arrow down visually */
+}
+
+.convert-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* 4. Style the button to match your picture and align it to the right */
+.download-btn {
+  margin-top: 16px;
+  align-self: flex-end; /* This aligns the button strictly to the right side */
+  background-color: var(--active-bg);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 141, 204, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #007BB5;
+  transform: translateY(-2px);
+}
+/* Optional: Make the output box look nicer when it becomes a picture */
+.readonly-output {
+  /* ... your existing CSS ... */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px; /* Gives the text breathing room in the final image */
+}
+
+/* =========================================
+   JEJAK BASAMO (HISTORY) SECTION
+   ========================================= */
+
+.jejak-hero {
+  text-align: center;
+  padding: 100px 32px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.jejak-title {
+  font-size: 3.5rem;
+  color: var(--brand-blue);
+  margin-bottom: 16px;
+}
+
+.jejak-subtitle {
+  font-size: 1.25rem;
+  color: #4A5568;
+  line-height: 1.6;
+}
+
+.jejak-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 32px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* Big space between each story section */
+}
+
+/* The standard row (Text Left, Image Right) */
+.jejak-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* The reversed row (Image Left, Text Right) */
+.jejak-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.jejak-text {
+  flex: 1;
+}
+
+/* The small orange category tag */
+.jejak-tag {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--brand-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.jejak-text h3 {
+  font-size: 2.2rem;
+  color: var(--brand-blue);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.jejak-text p {
+  font-size: 1.1rem;
+  color: #4A5568;
+  line-height: 1.8;
+}
+
+.jejak-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* MD3 Image Styling */
+.jejak-image {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  object-fit: cover; /* Ensures the images are all the same size without stretching */
+  border-radius: 32px; /* Very soft MD3 corners */
+  box-shadow: 0 12px 32px rgba(8, 85, 182, 0.15); /* Elegant floating shadow */
+  transition: transform 0.4s ease;
+}
+
+.jejak-image:hover {
+  transform: scale(1.03); /* Subtle zoom when you hover over the history pictures */
+}
+
+/* =========================================
+   GALLERY CAROUSEL SECTION
+   ========================================= */
+
+.gallery-section {
+  padding: 60px 32px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-header h2 {
+  font-size: 2.5rem;
+  color: var(--brand-blue);
+  margin-bottom: 12px;
+}
+
+.gallery-header p {
+  font-size: 1.1rem;
+  color: #4A5568;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 16px;
+}
+
+/* The invisible track that holds the images */
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Makes the images 'snap' into place */
+  scroll-behavior: smooth; /* Smooth gliding effect */
+  padding: 20px 0; /* Prevents shadows from being clipped */
+  
+  /* Hides the ugly scrollbar in most browsers */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+/* The individual image cards */
+.gallery-card {
+  flex: 0 0 350px; /* Forces every image to be exactly 350px wide */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 24px;
+  scroll-snap-align: center; /* Snaps the image to the center of the view */
+  box-shadow: 0 4px 12px rgba(8, 85, 182, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Navigation Buttons (MD3 FAB Style) */
+.carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%; /* Perfect circle */
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(8, 85, 182, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0; /* Prevents the buttons from squishing */
+}
+
+.carousel-btn:hover {
+  background-color: var(--active-bg);
+  transform: scale(1.05);
+}
+
+.carousel-btn svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* =========================================
+   PESAN KANTI (TESTIMONIALS) SECTION
+   ========================================= */
+
+/* Hero Title */
+.pesan-hero {
+  text-align: center;
+  padding: 80px 32px 40px;
+  background-color: var(--brand-blue); /* Matches the blue background from your picture */
+}
+
+.pesan-title {
+  font-size: 2.5rem;
+  color: #ffffff; /* White text for contrast */
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Masonry Grid Setup */
+.pesan-section {
+  background-color: var(--brand-blue); /* Continues the blue background */
+  padding: 40px 32px 80px;
+}
+
+.pesan-masonry {
+  max-width: 1200px;
+  margin: 0 auto;
+  column-count: 3; /* Creates 3 columns like your picture */
+  column-gap: 32px;
+}
+
+.testimonial-wrapper {
+  break-inside: avoid;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  border: 1px solid #E0E0E0; /* Garis tipis ala Keep Note */
+  border-radius: 12px; /* Ujung membulat yang lebih lembut */
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* Bayangan tipis */
+  transition: box-shadow 0.2s ease;
+}
+
+.testimonial-wrapper:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Bayangan menebal saat disentuh */
+}
+
+.speech-bubble {
+  margin-bottom: 16px;
+}
+
+.speech-bubble p {
+  font-size: 1.1rem;
+  color: #3C4043; /* Warna abu-abu gelap khas teks Note */
+  line-height: 1.6;
+}
+
+.avatar-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.avatar-info h4 {
+  color: #202124;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.avatar-info span {
+  color: var(--brand-orange);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* =========================================
+   BOTTOM FORM CTA SECTION
+   ========================================= */
+.pesan-form-section {
+  background-color: var(--bg-cream);
+  padding: 80px 32px;
+}
+
+.form-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 32px;
+  padding: 48px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  box-shadow: 0 12px 24px rgba(8, 85, 182, 0.08);
+}
+
+.form-text-content {
+  flex: 1;
+}
+
+.form-text-content h2 {
+  font-size: 2.5rem;
+  color: var(--brand-orange); /* Matches the orange "Yuk jadi bagian..." text */
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.form-text-content p {
+  font-size: 1.2rem;
+  color: var(--brand-blue);
+  line-height: 1.6;
+}
+
+/* MD3 Form Styling */
+.md3-form {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-field label {
+  font-weight: 600;
+  color: var(--brand-blue);
+}
+
+.input-field input,
+.input-field textarea {
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 2px solid #E1EDF7;
+  font-family: var(--gemini-font);
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease;
+  background-color: #F8F9FA;
+  resize: none;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+  outline: none;
+  border-color: var(--active-bg);
+  background-color: #ffffff;
+}
+
+.form-submit {
+  align-self: flex-start;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   CARO USIK (HOW TO PLAY) SECTION
+   ========================================= */
+
+.usik-hero {
+  text-align: center;
+  padding: 100px 32px 40px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.usik-title {
+  font-size: 3.5rem;
+  color: var(--brand-blue);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.usik-subtitle {
+  font-size: 1.2rem;
+  color: #4A5568;
+  line-height: 1.6;
+}
+
+.usik-steps-section {
+  padding: 40px 32px 100px;
+}
+
+.steps-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between each step */
+}
+
+/* Individual Step Card */
+.step-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 32px;
+  padding: 40px;
+  gap: 40px;
+  box-shadow: 0 8px 24px rgba(8, 85, 182, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Alternating Layout */
+.step-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Big Number Badge */
+.step-number {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 8rem;
+  font-weight: 800;
+  color: rgba(0, 141, 204, 0.08); /* Giant, faint blue number in the background */
+  line-height: 1;
+  z-index: 0;
+}
+
+.step-card.reverse .step-number {
+  left: auto;
+  right: -20px;
+}
+
+/* Text Content */
+.step-content {
+  flex: 1.2;
+  position: relative;
+  z-index: 1; /* Keeps text above the giant number */
+}
+
+.step-content h3 {
+  font-size: 2rem;
+  color: var(--brand-blue);
+  margin-bottom: 16px;
+}
+
+.step-content p {
+  font-size: 1.15rem;
+  color: #4A5568;
+  line-height: 1.7;
+}
+
+/* Image Box */
+.step-image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-img {
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 4px solid var(--bg-cream); /* Nice cream border around the picture */
+}
+
+/* =========================================
+   CARO USIK VIDEO SECTION
+   ========================================= */
+
+.video-section {
+  padding: 0 32px 80px; /* Pushes the steps down a bit */
+  max-width: 1000px; /* Makes the video nice and big on desktop */
+  margin: 0 auto;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Perfect widescreen ratio */
+  border-radius: 32px; /* Smooth MD3 corners */
+  overflow: hidden; /* Clips the sharp corners of the YouTube iframe */
+  box-shadow: 0 16px 40px rgba(8, 85, 182, 0.15); /* Elegant floating shadow */
+  background-color: #000000; /* Shows black before the video loads */
+  border: 4px solid #ffffff; /* Adds a clean white border around the video */
+}
+
+/* Make sure the iframe fills the container perfectly */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========================================
+   DETAIL AKSARA PAGE
+   ========================================= */
+.detail-container {
+  max-width: 800px;
+  margin: 100px auto 40px;
+  padding: 0 24px;
+}
+
+.detail-header {
+  text-align: center;
+  background-color: var(--bg-cream, #FDFDF5);
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.aksara-big {
+  font-size: 8rem;
+  color: var(--brand-blue);
+  margin: 0;
+  line-height: 1;
+}
+
+.aksara-name {
+  font-size: 2rem;
+  color: var(--brand-orange);
+  margin: 16px 0 24px;
+}
+
+.audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Grid Diakritik */
+.diakritik-section, .contoh-section {
+  margin-bottom: 40px;
+}
+
+.diakritik-section h3, .contoh-section h3 {
+  color: var(--brand-blue);
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+.diakritik-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.diakritik-card {
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 100px;
+  flex: 1 1 auto; /* Membiarkan kotak melar otomatis sesuai isi teks */
+}
+
+.diakritik-card .incung-text {
+  font-family: 'SerambiCustomFont', sans-serif !important;
+  font-size: 2.5rem; /* Ukuran sedikit disesuaikan agar rapi */
+  color: var(--brand-blue);
+  margin-bottom: 8px;
+  white-space: nowrap; /* WAJIB: Mencegah teks incung yang panjang turun ke baris baru */
+}
+
+.diakritik-card .incung-text {
+  font-size: 3rem;
+  color: var(--brand-blue);
+  margin-bottom: 8px;
+}
+
+/* List Contoh Kata */
+.contoh-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contoh-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-left: 4px solid var(--brand-orange);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.contoh-card .incung-word {
+  font-size: 2.5rem;
+  color: var(--brand-blue);
+  width: 120px;
+}
+
+.contoh-card .latin-word {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+/* =========================================
+   MOBILE RESPONSIVE FIXES (Screens under 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+  /* 1. General Mobile Tweaks */
+  body {
+    overflow-x: hidden; /* Prevents side-to-side accidental scrolling */
+  }
+
+  /* Shrink giant desktop headings so they fit phone screens */
+  .jejak-title, .usik-title, .pesan-title {
+    font-size: 2.2rem !important;
+  }
+
+  /* 2. Fix the Rupo Basamo Converter Page */
+  .converter-container {
+    flex-direction: column; /* Stacks input box on top, output box on bottom */
+    align-items: stretch;
+  }
+
+  .convert-icon {
+    transform: rotate(90deg); /* Turns the horizontal orange arrow into a downward arrow */
+    margin: 10px auto !important;
+  }
+
+  .md3-textarea {
+    height: 200px !important; /* Shorter height so it doesn't take the whole phone screen */
+  }
+
+  /* 3. Fix the Jejak Basamo Zigzag History Rows */
+  .jejak-row, 
+  .jejak-row.reverse {
+    flex-direction: column !important; /* Stacks the picture on top of the text */
+    gap: 24px;
+  }
+
+  .jejak-image {
+    height: 250px !important; /* Adjusts image height for mobile */
+  }
+
+  /* 4. Fix Pesan Kanti Masonry (Testimonials) */
+  .pesan-masonry {
+    column-count: 1 !important; /* Changes from 3 columns to a single column stack */
+  }
+
+  .form-container {
+    flex-direction: column !important; /* Stacks text content and form vertically */
+    padding: 24px !important;
+  }
+
+  /* 5. Fix Caro Usik Step Cards */
+  .step-card, 
+  .step-card.reverse {
+    flex-direction: column !important; /* Stacks step number, text, and image vertically */
+    padding: 24px !important;
+    gap: 20px;
+  }
+
+  .step-img {
+    height: 220px !important;
+  }
+
+  .step-number {
+    font-size: 5rem !important; /* Smaller giant background number for mobile */
+    top: -10px;
+    left: 10px;
+  }
+}
+/* Hide hamburger button on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--brand-blue);
+  width: 40px;
+  height: 40px;
+}
+
+.menu-toggle svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* =========================================
+   PENGATURAN KHUSUS SELULER (MAX-WIDTH: 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+    /* Mengecilkan ukuran seluruh teks dasar secara merata di HP */
+  body {
+    font-size: 14px !important; /* Ukuran dasar standar mobile yang lebih nyaman */
+  }
+  body, 
+  .features-section, 
+  .about-section, 
+  .gallery-section, 
+  .image-banner-section, 
+  .aksara-grid {
+    padding-left: 4px !important;  /* Margin kiri diperkecil (biasanya 16px/32px) */
+    padding-right: 4px !important; /* Margin kanan diperkecil */
+    box-sizing: border-box !important;
+  }
+
+  /* Menyesuaikan ukuran semua jenis heading agar lebih proporsional di layar kecil */
+  h1, .usik-title, .jejak-title, .pesan-title {
+    font-size: 1.8rem !important; /* Judul besar dikecilkan */
+    line-height: 1.3 !important;
+  }
+
+  h2, .gallery-header h2 {
+    font-size: 1.4rem !important; /* Judul section dikecilkan */
+  }
+
+  h3, .step-content h3, .card-title {
+    font-size: 1.15rem !important; /* Judul card/sub-judul dikecilkan */
+  }
+
+  p, span, a, li, .card-text, .about-text p, .banner-quote {
+    font-size: 0.9rem !important; /* Paragraf dan teks isi dikecilkan agar pas dan tidak terlalu panjang ke bawah */
+    line-height: 1.5 !important;
+  }
+  /* Atur tata letak grid agar dalam 1 baris tampil pas (misalnya 3 kolom atau sesuaikan) */
+  .aksara-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Mengatur 3 kartu dalam 1 baris secara rapi */
+    gap: 10px !important;
+    padding: 0 !important;
+  }
+
+  /* Paksa lebar setiap kartu memenuhi kolom grid-nya dengan proporsional */
+  .aksara-card {
+    width: 100% !important; /* Lebar otomatis mengikuti kolom grid */
+    max-width: 100% !important;
+    padding: 10px 6px !important; /* Padding ringkas agar tidak terlalu besar */
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Pastikan karakter utama tetap besar dan jelas */
+  .aksara-card .char-main {
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Sesuaikan teks detail di bawahnya */
+  .aksara-card .char-romaji {
+    font-size: 0.8rem !important;
+  }
+
+  .aksara-card .char-sound {
+    font-size: 0.7rem !important;
+  }
+  /* 1. Navbar Model Seluler (Menu Hamburger) */
+  .menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--brand-blue);
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-toggle svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    gap: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    display: none; /* Disembunyikan sebelum diklik */
+  }
+
+  .nav-menu.active-menu {
+    display: flex !important; /* Muncul saat menu hamburger diklik */
+  }
+
+  /* 2. Hilangkan Gambar di Hero Section khusus Mobile */
+  .hero-image, 
+  .usik-hero img, 
+  header img {
+    display: none !important;
+  }
+
+  /* 3. Card Section Berjejer Vertikal (Card 1 di atas, Card 2 di bawahnya, dst) */
+ /* =========================================
+     CARD SECTION: 1 ROW = 1 CARD (VERTICAL)
+     ========================================= */
+  .cards-container, 
+  .card-grid, 
+  .features-container,
+  section.cards, 
+  div.cards {
+    display: flex !important;
+    flex-direction: column !important; /* Memaksa susunan ke bawah */
+    width: 100% !important;
+    gap: 24px !important; /* Jarak antar card agar tidak terlalu rapat */
+    padding: 0 8px !important; /* Memberikan ruang kiri dan kanan layar HP */
+    box-sizing: border-box !important;
+  }
+
+  /* Target your exact container class */
+  .card-container {
+    display: flex !important;
+    flex-direction: column !important; /* Force cards to stack top-to-bottom */
+    width: 100% !important;
+    gap: 20px !important;            /* Space between Card 1, 2, and 3 */
+    padding: 0 8px !important;        /* Prevents cards from touching screen edges */
+    box-sizing: border-box !important;
+  }
+
+  /* Target your exact individual card class */
+  .feature-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;             /* Stop them from sharing horizontal space */
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  /* 1. Stack the container and make it a relative positioning box */
+  .about-container {
+    display: block !important;
+    position: relative !important;
+    padding: 32px 20px !important;
+    overflow: hidden !important;
+    border-radius: 24px;
+  }
+
+  /* 2. Turn the image into an absolute background layer with 10% opacity */
+  .about-image-wrapper {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    pointer-events: none !important; /* Lets clicks pass through to the text */
+  }
+
+  .about-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0.1 !important; /* Sets image opacity to 10% only on mobile */
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* 3. Force the text container to sit safely on top of the background image */
+  .about-text {
+    position: relative !important;
+    z-index: 2 !important; /* Puts text above the 10% background image */
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* 4. Ensure the paragraphs use full width without feeling cramped */
+  .about-text p {
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+  }
+  /* Adjust padding so text has breathing room on phones */
+  .image-banner-section {
+    padding: 0 20px !important;
+    aspect-ratio: 4 / 3 !important; /* Slightly taller on mobile so text fits nicely */
+  }
+
+  /* Shrink and fit the quote text for mobile screens */
+  .banner-quote {
+    font-size: 0.95rem !important; /* Smaller, readable size for phones */
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Shrink the call-to-action text for mobile screens */
+  .banner-cta {
+    font-size: 1.05rem !important; /* Scaled down for mobile */
+  }
+  /* 1. Atur container agar tombol bisa melayang di atas gambar */
+  .carousel-container {
+    position: relative !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* 2. Buat track gambar memenuhi lebar layar HP */
+  .carousel-track {
+    width: 100% !important;
+    gap: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 3. Buat ukuran kartu gambar landscape tapi TIDAK TERLALU TINGGI */
+  .gallery-card {
+    flex: 0 0 100% !important;       /* Lebar pas satu layar HP */
+    height: 200px !important;         /* Tinggi dikunci agar ceper/tidak jangkung */
+    object-fit: cover !important;     /* Gambar tetap proporsional */
+    border-radius: 16px !important;
+    box-shadow: 0 6px 16px rgba(8, 85, 182, 0.15) !important;
+  }
+
+  /* 4. Letakkan tombol navigasi (next/prev) melayang di tengah-tengah atas gambar */
+  .carousel-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: rgba(8, 85, 182, 0.75) !important; /* Semi-transparan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  #prevBtn {
+    left: 10px !important;
+  }
+
+  #nextBtn {
+    right: 10px !important;
+  }
+
+  .carousel-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  /* 1. Kurangi padding luar footer agar lebih rapat */
+  .site-footer {
+    padding: 30px 16px !important;
+  }
+
+  /* 2. Pertahankan kolom sejajar, tapi kecilkan gap dan buat center */
+  .footer-container {
+    flex-wrap: nowrap !important; /* Mencegah kolom turun ke bawah */
+    justify-content: center !important;
+    gap: 24px !important; /* Pangkas jarak antar kolom yang tadinya 80px */
+    max-width: 100% !important;
+  }
+
+  /* 3. Kecilkan ukuran tiap kolom */
+  .social-column {
+    gap: 14px !important; /* Jarak antar baris ikon diperkecil */
+  }
+
+  /* 4. Kecilkan ukuran teks dan ikon agar pas di layar kecil */
+  .social-link {
+    gap: 4px !important;
+  }
+
+  .social-icon {
+    width: 12px !important; /* Ikon dikecilkan dari 24px */
+    height: 12px !important;
+  }
+
+  .social-text {
+    font-size: 0.5rem !important; /* Teks dikecilkan agar tidak terlalu besar */
+    font-weight: 400 !important;
+  }
+
+}

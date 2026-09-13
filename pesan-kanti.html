@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan Kanti - SERAMBI</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar (Remember to set active class!) -->
+  <nav class="md3-navbar">
+    <div class="brand">
+      <img src="images/icon.png" alt="Serambi Logo" class="brand-icon">
+      <span class="brand-name-main">SERAMBI</span>
+      <span class="brand-text">serBL</span>
+    </div>
+    <!-- NEW: Hamburger Menu Button (Only visible on mobile) -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+      </svg>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Laheak</a></li>
+      <li><a href="aksara.html">Aksara</a></li>
+      <li><a href="rupo-basamo.html">Rupo Basamo</a></li>
+      <li><a href="jejak-basamo.html">Jejak Basamo</a></li>
+      <li><a href="pesan-kanti.html" class="active">Pesan Kanti</a></li>
+      <li><a href="caro-usik.html">Caro Usik</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="pesan-hero">
+    <h1 class="pesan-title">Cerita & Pengalaman Mereka<br>Tentang Belajar Aksara Incung Bersama SERAMBI</h1>
+  </header>
+
+  <!-- Masonry Testimonials Section (Dynamic) -->
+  <section class="pesan-section">
+    <div class="pesan-masonry" id="notesContainer">
+      <!-- Data dari database Firebase akan otomatis muncul di sini -->
+    </div>
+  </section>
+
+  <!-- Bottom CTA & Form Section -->
+  <section class="pesan-form-section">
+    <div class="form-container">
+      <div class="form-text-content">
+        <h2>Yuk jadi bagian dari cerita ini!</h2>
+        <p>Bagikan pengalamanmu belajar aksara Incung bersama SERAMBI dan inspirasi yang kamu rasakan.</p>
+        <!-- You could place your 3D character image here if you want it next to the text! -->
+      </div>
+      
+      <form class="md3-form" id="pesanKantiForm">
+        <div class="input-field">
+          <label>Nama Panggilan</label>
+          <input type="text" id="namaInput" placeholder="Masukkan namamu" required>
+        </div>
+
+        <!-- TAMBAHAN: Kolom Asal Instansi -->
+        <div class="input-field">
+          <label>Asal Instansi / Asal Sekolah</label>
+          <input type="text" id="instansiInput" placeholder="Masukkan asal instansi/sekolah" required>
+        </div>
+        
+        <div class="input-field">
+          <label>Pesan & Pengalaman</label>
+          <textarea id="pesanInput" rows="4" placeholder="Ceritakan keseruanmu belajar Aksara Incung..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary form-submit">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+  <script type="module" src="script.js"></script>
+<!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Column 1: Serambi (Your new addition) -->
+      <div class="social-column">
+        <a href="https://instagram.com/serambi.fest" class="social-link" target="_blank">
+          <!-- Instagram Icon SVG -->
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          <span class="social-text">@serambi.fest</span>
+        </a>
+      </div>
+
+      <!-- Column 2: Duta Bahasa Jambi -->
+      <div class="social-column">
+        <a href="https://instagram.com/dutabahasajambi" class="social-link" target="_blank">
+          <!-- Instagram Icon SVG -->
+          <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span class="social-text">@dutabahasajambi</span>
+        </a>
+        <a href="#" class="social-link" target="_blank">
+          <!-- YouTube Icon SVG -->
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.1 0 12 0 12s0 3.9.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.9 24 12 24 12s0-3.9-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          <span class="social-text">@dutabahasajambi</span>
+        </a>
+      </div>
+
+      <!-- Column 3: Balai Bahasa Provinsi Jambi -->
+      <div class="social-column">
+        <a href="https://instagram.com/balaibahasaprovinsijambi" class="social-link" target="_blank">
+          <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span class="social-text">@balaibahasaprovinsijambi</span>
+        </a>
+        <a href="#" class="social-link" target="_blank">
+          <svg class="social-icon" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.1 0 12 0 12s0 3.9.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.9 24 12 24 12s0-3.9-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span class="social-text">@balaibahasaprovinsijambi</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
