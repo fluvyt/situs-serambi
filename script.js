@@ -141,7 +141,7 @@ const dataAksara = {
   "ka": {
     nama: "Ka",
     aksara: "k", // Ketikan di font incung.ttf yang menghasilkan huruf 'Ka'
-    audio: "audio/ka.mp3", // Pastikan kamu menyiapkan file audio ini di folder 'audio'
+    audio: "audio/ka.MP3", // Pastikan kamu menyiapkan file audio ini di folder 'audio'
     diakritik: [
       { vokal: "a", hasil: "k", romaji: "ka" },
       { vokal: "i", hasil: "ki/kL/ki", romaji: "ki" },
@@ -159,7 +159,7 @@ const dataAksara = {
     ]
   },
   "ga": {
-    nama: "Ga", aksara: "g", audio: "audio/ga.mp3",
+    nama: "Ga", aksara: "g", audio: "audio/ga.MP3",
     diakritik: [
       { vokal: "a", hasil: "g", romaji: "ga" },
       { vokal: "i", hasil: "gi/gL/gl", romaji: "gi" },
@@ -177,7 +177,7 @@ const dataAksara = {
     ]
   },
   "nga": {
-    nama: "Nga", aksara: "N", audio: "audio/nga.mp3",
+    nama: "Nga", aksara: "N", audio: "audio/nga.MP3",
     diakritik: [
       { vokal: "a", hasil: "N", romaji: "nga" },
       { vokal: "i", hasil: "Ni/NL/Nl", romaji: "ngi" },
@@ -195,7 +195,7 @@ const dataAksara = {
     ]
   },
   "ta": {
-    nama: "Ta", aksara: "t", audio: "audio/ta.mp3",
+    nama: "Ta", aksara: "t", audio: "audio/ta.MP3",
     diakritik: [
       { vokal: "a", hasil: "t", romaji: "ta" },
       { vokal: "i", hasil: "ti/tL/tl", romaji: "ti" },
@@ -213,7 +213,7 @@ const dataAksara = {
     ]
   },
   "da": {
-    nama: "Da", aksara: "d", audio: "audio/da.mp3",
+    nama: "Da", aksara: "d", audio: "audio/da.MP3",
     diakritik: [
       { vokal: "a", hasil: "d", romaji: "da" },
       { vokal: "i", hasil: "di/dL/dl", romaji: "di" },
@@ -233,7 +233,7 @@ const dataAksara = {
 
   // ================= ROW 2 =================
   "na": {
-    nama: "Na", aksara: "n", audio: "audio/na.mp3",
+    nama: "Na", aksara: "n", audio: "audio/na.MP3",
     diakritik: [
       { vokal: "a", hasil: "n", romaji: "na" },
       { vokal: "i", hasil: "ni/nL/nl", romaji: "ni" },
@@ -251,7 +251,7 @@ const dataAksara = {
     ]
   },
   "pa": {
-    nama: "Pa", aksara: "p", audio: "audio/pa.mp3",
+    nama: "Pa", aksara: "p", audio: "audio/pa.MP3",
     diakritik: [
       { vokal: "a", hasil: "p", romaji: "pa" },
       { vokal: "i", hasil: "pi/pL/pl", romaji: "pi" },
@@ -269,7 +269,7 @@ const dataAksara = {
     ]
   },
   "ba": {
-    nama: "Ba", aksara: "b", audio: "audio/ba.mp3",
+    nama: "Ba", aksara: "b", audio: "audio/ba.MP3",
     diakritik: [
       { vokal: "a", hasil: "b", romaji: "ba" },
       { vokal: "i", hasil: "bi/bL/bl", romaji: "bi" },
@@ -287,7 +287,7 @@ const dataAksara = {
     ]
   },
   "ma": {
-    nama: "Ma", aksara: "m", audio: "audio/ma.mp3",
+    nama: "Ma", aksara: "m", audio: "audio/ma.MP3",
     diakritik: [
       { vokal: "a", hasil: "m", romaji: "ma" },
       { vokal: "i", hasil: "mi/mL/ml", romaji: "mi" },
@@ -305,7 +305,7 @@ const dataAksara = {
     ]
   },
   "ca": {
-    nama: "Ca", aksara: "c", audio: "audio/ca.mp3",
+    nama: "Ca", aksara: "c", audio: "audio/ca.MP3",
     diakritik: [
       { vokal: "a", hasil: "c/Q", romaji: "ca" },
       { vokal: "i", hasil: "ci/cL/cl", romaji: "ci" },
@@ -324,7 +324,7 @@ const dataAksara = {
   },
   // ================= ROW 3 =================
   "ja": {
-    nama: "Ja", aksara: "j", audio: "audio/ja.mp3",
+    nama: "Ja", aksara: "j", audio: "audio/ja.MP3",
     diakritik: [
       { vokal: "a", hasil: "j", romaji: "ja" },
       { vokal: "i", hasil: "ji/jL/jl", romaji: "ji" },
@@ -342,7 +342,7 @@ const dataAksara = {
     ]
   },
   "nya": {
-    nama: "Nya", aksara: "Y", audio: "audio/nya.mp3",
+    nama: "Nya", aksara: "Y", audio: "audio/nya.MP3",
     diakritik: [
       { vokal: "a", hasil: "Y", romaji: "nya" },
       { vokal: "i", hasil: "Yi/YL/Yl", romaji: "nyi" },
@@ -360,7 +360,7 @@ const dataAksara = {
     ]
   },
   "sa": {
-    nama: "Sa", aksara: "s", audio: "audio/sa.mp3",
+    nama: "Sa", aksara: "s", audio: "audio/sa.MP3",
     diakritik: [
       { vokal: "a", hasil: "s", romaji: "sa" },
       { vokal: "i", hasil: "si/sL/sl", romaji: "si" },
@@ -379,7 +379,7 @@ const dataAksara = {
   },
 
   "ra": {
-    nama: "Ra", aksara: "r", audio: "audio/ra.mp3",
+    nama: "Ra", aksara: "r", audio: "audio/ra.MP3",
     diakritik: [
       { vokal: "a", hasil: "r/R", romaji: "ra" },
       { vokal: "i", hasil: "ri/rL/rI", romaji: "ri" },
@@ -398,7 +398,7 @@ const dataAksara = {
   },
 
   "la": {
-    nama: "La (Varian)", aksara: "l", audio: "audio/ra.mp3",
+    nama: "La (Varian)", aksara: "l", audio: "audio/ra.MP3",
     diakritik: [
       { vokal: "a", hasil: "l", romaji: "la" },
       { vokal: "i", hasil: "li/lL/lI", romaji: "li" },
@@ -418,7 +418,7 @@ const dataAksara = {
 
   // ================= ROW 4 =================
   "wa": {
-    nama: "Wa", aksara: "w", audio: "audio/wa.mp3",
+    nama: "Wa", aksara: "w", audio: "audio/wa.MP3",
     diakritik: [
       { vokal: "a", hasil: "w", romaji: "wa" },
       { vokal: "i", hasil: "wi/wL/wl", romaji: "wi" },
@@ -436,7 +436,7 @@ const dataAksara = {
     ]
   },
   "ya": {
-    nama: "Ya", aksara: "y", audio: "audio/ya.mp3",
+    nama: "Ya", aksara: "y", audio: "audio/ya.MP3",
     diakritik: [
       { vokal: "a", hasil: "y", romaji: "ya" },
       { vokal: "i", hasil: "yi/yL/yl", romaji: "yi" },
@@ -453,7 +453,7 @@ const dataAksara = {
     ]
   },
   "ha": {
-    nama: "Ha", aksara: "h", audio: "audio/ha.mp3",
+    nama: "Ha", aksara: "h", audio: "audio/ha.MP3",
     diakritik: [
       { vokal: "a", hasil: "h", romaji: "ha" },
       { vokal: "i", hasil: "hi/hL/hl", romaji: "hi" },
@@ -471,7 +471,7 @@ const dataAksara = {
     ]
   },
   "a": {
-    nama: "A", aksara: "a", audio: "audio/a.mp3",
+    nama: "A", aksara: "a", audio: "audio/a.MP3",
     diakritik: [
       { vokal: "a", hasil: "a", romaji: "a" },
       { vokal: "i", hasil: "ai/aL/aI", romaji: "i" },
@@ -488,7 +488,7 @@ const dataAksara = {
     ]
   },
   "mba": {
-    nama: "Mba", aksara: "B", audio: "audio/mba.mp3",
+    nama: "Mba", aksara: "B", audio: "audio/mba.MP3",
     diakritik: [
       { vokal: "a", hasil: "B", romaji: "mba" },
       { vokal: "i", hasil: "Bi/BL/Bl", romaji: "mbi" },
@@ -508,7 +508,7 @@ const dataAksara = {
 
   // ================= ROW 5 =================
   "ngga": {
-    nama: "Ngga", aksara: "G", audio: "audio/ngga.mp3",
+    nama: "Ngga", aksara: "G", audio: "audio/ngga.MP3",
     diakritik: [
       { vokal: "a", hasil: "G", romaji: "ngga" },
       { vokal: "i", hasil: "Gi/GL/Gl", romaji: "nggi" },
@@ -525,7 +525,7 @@ const dataAksara = {
     ]
   },
   "nda": {
-    nama: "Nda", aksara: "D", audio: "audio/nda.mp3",
+    nama: "Nda", aksara: "D", audio: "audio/nda.MP3",
     diakritik: [
       { vokal: "a", hasil: "D", romaji: "nda" },
       { vokal: "i", hasil: "Di/DL/Dl", romaji: "ndi" },
@@ -543,7 +543,7 @@ const dataAksara = {
     ]
   },
   "nja": {
-    nama: "Nja", aksara: "J", audio: "audio/nja.mp3",
+    nama: "Nja", aksara: "J", audio: "audio/nja.MP3",
     diakritik: [
       { vokal: "a", hasil: "J", romaji: "nja" },
       { vokal: "i", hasil: "Ji/JL/Jl", romaji: "nji" },
@@ -560,7 +560,7 @@ const dataAksara = {
     ]
   },
   "mpa": {
-    nama: "Mpa", aksara: "P", audio: "audio/mpa.mp3",
+    nama: "Mpa", aksara: "P", audio: "audio/mpa.MP3",
     diakritik: [
       { vokal: "a", hasil: "P", romaji: "mpa" },
       { vokal: "i", hasil: "Pi/PL/Pl", romaji: "mpi" },
@@ -577,7 +577,7 @@ const dataAksara = {
     ]
   },
   "ngka": {
-    nama: "Ngka", aksara: "K", audio: "audio/ngka.mp3",
+    nama: "Ngka", aksara: "K", audio: "audio/ngka.MP3",
     diakritik: [
       { vokal: "a", hasil: "K", romaji: "ngka" },
       { vokal: "i", hasil: "Ki/KL/Kl", romaji: "ngki" },
@@ -596,7 +596,7 @@ const dataAksara = {
 
   // ================= ROW 6 =================
   "nta": {
-    nama: "Nta", aksara: "T", audio: "audio/nta.mp3",
+    nama: "Nta", aksara: "T", audio: "audio/nta.MP3",
     diakritik: [
       { vokal: "a", hasil: "T", romaji: "nta" },
       { vokal: "i", hasil: "Ti/TL/Tl", romaji: "nti" },
@@ -613,7 +613,7 @@ const dataAksara = {
     ]
   },
   "nca": {
-    nama: "Nca", aksara: "C", audio: "audio/nca.mp3",
+    nama: "Nca", aksara: "C", audio: "audio/nca.MP3",
     diakritik: [
       { vokal: "a", hasil: "C", romaji: "nca" },
       { vokal: "i", hasil: "Ci/CL/Cl", romaji: "nci" },
@@ -630,7 +630,7 @@ const dataAksara = {
     ]
   },
   "ngsa": {
-    nama: "Ngsa", aksara: "S", audio: "audio/ngsa.mp3",
+    nama: "Ngsa", aksara: "S", audio: "audio/ngsa.MP3",
     diakritik: [
       { vokal: "a", hasil: "S", romaji: "ngsa" },
       { vokal: "i", hasil: "Si/SL/Sl", romaji: "ngsi" },
