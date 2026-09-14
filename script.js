@@ -398,7 +398,7 @@ const dataAksara = {
   },
 
   "la": {
-    nama: "La (Varian)", aksara: "l", audio: "audio/ra.MP3",
+    nama: "La", aksara: "l", audio: "audio/la.MP3",
     diakritik: [
       { vokal: "a", hasil: "l", romaji: "la" },
       { vokal: "i", hasil: "li/lL/lI", romaji: "li" },
